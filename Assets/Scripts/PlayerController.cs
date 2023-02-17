@@ -17,8 +17,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MovePlayer();
+    }
+
+    // Move player based on arrow key input
+    void MovePlayer()
+    {
     horizontalInput = Input.GetAxis("Horizontal");
     transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
-
     }
 }
